@@ -1,7 +1,21 @@
+import AboutFlouoro from "@/components/layout/AboutFlouoro";
+import CategoryCard from "@/components/layout/CategoryCard";
+import GetQuote from "@/components/layout/GetQuote";
+import HomeHero from "@/components/layout/HomeHero";
+import InnovationSection from "@/components/layout/InnovationSection";
+import QualitySection from "@/components/layout/QualitySection";
+import ReliabilitySection from "@/components/layout/ReliabilitySection";
+
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 items-center justify-items-center min-h-screen p-8 pb-20 gap-16 text-xl md:text-5xl sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h4>Home</h4>
-    </div>
+    <main className="">
+      <HomeHero />
+      <CategoryCard />
+      <QualitySection />
+      <AboutFlouoro />
+      <ReliabilitySection />
+      <InnovationSection />
+      <GetQuote />
+    </main>
   );
 }

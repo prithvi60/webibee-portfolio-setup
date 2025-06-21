@@ -3,15 +3,31 @@
 @plugin "@tailwindcss/typography";
 
 :root {
+  font-size: 16px;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #333333;
+  --primary: #1d324a;
+  --secondary: #bcb8a5;
+  --success: #519cc4;
+  --info: #353535;
 }
 
-@theme {
+@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --font-roboto: var(--font-roboto);
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 16px;
 }
 
 @layer base {
@@ -24,7 +40,7 @@
   }
 
   .padding {
-    @apply px-5 py-[40px] md:px-[80px] md:py-[70px];
+    @apply px-3 md:px-10 py-[40px] md:py-[70px];
   }
 }
 
@@ -34,4 +50,47 @@
 
 .slick-slide > div {
   margin: 0 10px !important;
+}
+
+.clip-pathHero {
+  clip-path: polygon(
+    12px 0px,
+    calc(100% - 12px) 0px,
+    100% 13px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0px calc(100% - 12px),
+    0px 12px
+  );
+}
+
+.clip-pathImg {
+  clip-path: polygon(24px 0, 100% 0, 100% 100%, 0 100%, 0 24px);
+}
+
+.clip-pathHero2::before {
+  clip-path: polygon(
+    12px 0px,
+    calc(100% - 12px) 0px,
+    100% 13px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0px calc(100% - 12px),
+    0px 12px
+  );
+}
+
+.clip-path-cut {
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    40% 100%,
+    40% 0%,
+    60% 0%,
+    60% 100%,
+    100% 100%,
+    100% 0%
+  );
 }

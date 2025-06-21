@@ -37,7 +37,7 @@ export default function MobMenu({ Menus }) {
         {isOpen ? (
           <IoClose className="text-black text-2xl rounded-full border border-black p-1" />
         ) : (
-          <GiHamburgerMenu className="text-lg" />
+          <GiHamburgerMenu className="text-lg text-white" />
         )}
       </button>
 
